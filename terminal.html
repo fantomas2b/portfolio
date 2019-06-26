@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+  <meta name="Content-Language" content="fr">
+  <meta name="Description" content="Code terminal">
+  <meta name="Subject" content="développement">
+  <meta name="Copyright" content="Bigeard Jonathan ">
+  <meta name="Author" content="Bigeard Jonathan">
+  <meta name="Publisher" content="Bigeard Jonathan">
+  <meta name="Category" content="développement">
+  <meta name="format-detection" content="telephone=yes">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="js/terminal.min.js"></script>
+
+    <link href="css/terminal.css" rel="stylesheet">
+    <link href="css/menu-terminal.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles2.css">
+    
+    <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>terminal</title>
+
+</head>
+
+<body>
+        <header class="mdl-layout__header mdl-layout__header--scroll fixed mdl-layout__header--transparent flex-important">
+
+
+
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link turquoise big-font" title="jonathan Bigeard" href="index.html" target="_blank"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                </nav>
+            
+        </header>
+  <pre id="main">
+┌─[✗]─[Bigeard@Jonathan]─[~]
+└──╼ $<ins><span id="pow-txt">---[Hacked !!!]</span></ins>
+<span id="tag-line">Je suis hacker éthique,<ins>1.5</ins><br>le temps que vous lisiez ce message<br><kbd>je vous aurais piraté,</kbd> regardez bien !<br>
+Hack en cours.<ins>2</ins>...</span><del></del><del id="pow-trigger"></del><br>
+<ins>1</ins><span id="tag-line"><ins>Connecté</ins><br>
+Vol de donées en cours.<ins>2</ins>..<br>
+10%<ins>1</ins>...20%<ins>1</ins>...30%<ins>1</ins>...40%<ins>1</ins>...50%<ins>1</ins>...60%<ins>1</ins>...70%<ins>1</ins>...80%<ins>1</ins>...90%<ins>1</ins>...100%<ins>1</ins><br>
+Téléchargement terminé</span><br>
+┌─[✗]─[Bigeard@Jonathan]─[~]
+└──╼ $ </pre>
+
+  <script>
+    $('#main').t({
+      beep: true,
+      caret: '<span style="color:tomato;">▎</span>',
+      typing: function(elm, chr) {
+
+        if (chr.match(/\-trigger/))
+          $('#pow-txt').show().delay(500).fadeOut(0);
+
+      }
+    });
+
+    $('#main').t({
+      mistype: 7,
+      pause_on_click: true,
+      typing: function(elm, chr) {
+        if (chr.match(/skyblue/))
+          elm.find('.t-caret').hide();
+        else if (chr.match(/__caret/))
+          elm.find('.t-caret').show();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
